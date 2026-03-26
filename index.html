@@ -186,6 +186,26 @@
       .hero-text p { font-size: 0.9rem; }
     }
 
+    /* Copie e cole apenas este trecho abaixo do .hero-badge { ... } */
+
+@media (max-width: 768px) {
+  .hero-badge {
+    top: 10px;
+    left: 10px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-badge {
+    top: 8px;
+    left: 8px;
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+}
+
     @keyframes pulseNeon {
   0% {
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 2px rgba(255, 0, 0, 0.5);
