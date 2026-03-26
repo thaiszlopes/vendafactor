@@ -52,6 +52,26 @@
       font-size: 1.2rem;
     }
 
+    .hero-badge {
+    position: absolute;
+    top: 15px;      /* Distância do topo da imagem */
+    left: 15px;     /* Distância do lado esquerdo da imagem */
+    background: rgba(255, 0, 0, 0.9); /* Fundo vermelho quase sólido */
+    color: #fff;    /* Texto branco para contraste */
+    padding: 8px 15px;
+    border-radius: 8px; /* Cantos arredondados */
+    font-weight: 900;    /* Texto bem grosso */
+    font-size: 1rem;    /* Tamanho do texto */
+    text-transform: uppercase; /* Tudo em maiúsculo */
+    font-family: 'Segoe UI Black', Arial, sans-serif; /* Fonte robusta */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7); /* Neon inicial sutil */
+    z-index: 2; /* Garante que fique acima de tudo no hero */
+    
+    /* Chama a animação 'pulseNeon' */
+    animation: pulseNeon 1s ease-in-out infinite; 
+    }
+
     /* CONTAINER */
     .container {
       max-width: 1000px;
@@ -165,17 +185,32 @@
       .hero-text h1 { font-size: 1.5rem; }
       .hero-text p { font-size: 0.9rem; }
     }
+
+    @keyframes pulseNeon {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 2px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 5px rgba(255, 0, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 2px rgba(255, 0, 0, 0.5);
+  }
+}
   </style>
 </head>
 <body>
 
   <div class="hero">
-    <img src="images/capa venda factor.png" alt="Moto">
-    <div class="hero-text">
-      <h1>YBR 125 Factor</h1>
-      <p>Conservada • Revisada • Pronta pra rodar</p>
-    </div>
+  <img src=<img src="images/capa venda factor.png" alt="Moto">
+
+  <div class="hero-badge">VENDE-SE</div>
+
+  <div class="hero-text">
+    <h1>YBR 125 Factor</h1>
+    <p>Conservada • Revisada • Pronta pra rodar</p>
   </div>
+</div>
 
   <div class="container">
     <div class="card">
